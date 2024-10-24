@@ -1,4 +1,4 @@
-package dev.trindadedev.exp
+package dev.trindadedev.exp.ui.activities
 
 import android.os.Bundle
 
