@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         config: [
-          { target: android, os: ubuntu-latest, tasks: assembleDebug, continueOnError: false },
+          { target: android, os: ubuntu-latest, tasks: assembleRelease, continueOnError: false },
           { target: iOS, os: macos-latest, tasks: compileKotlinIosArm64 compileKotlinIosX64 compileKotlinIosSimulatorArm64, continueOnError: false },
           { target: desktop, os: ubuntu-latest, tasks: compileKotlinDesktop, continueOnError: false }
         ]
@@ -44,3 +44,11 @@ jobs:
         with:
           name: all-repo-source-${{ matrix.config.target }}
           path: .
+      
+      - name: Upload Release Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: exp-android-apk
+          path: composeApp/build/outputs/apk/release
+      
+      # todo upload any executable of desktop, ios
