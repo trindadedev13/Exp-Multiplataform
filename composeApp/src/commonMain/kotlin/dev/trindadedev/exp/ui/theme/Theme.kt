@@ -10,18 +10,4 @@ expect fun ExpTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     highContrastDarkTheme: Boolean = false,
     content: @Composable () -> Unit,
-) {
-    val colorScheme =
-        when {
-            darkTheme && highContrastDarkTheme ->
-                DarkColorScheme.copy(background = Color.Black, surface = Color.Black)
-            darkTheme -> DarkColorScheme
-            else -> LightColorScheme
-        }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
-}
+)
