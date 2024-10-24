@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 
 import org.jetbrains.compose.resources.painterResource
 
-import dev.trindadedev.exp.ExpTheme
+import dev.trindadedev.exp.ui.theme.ExpTheme
 
 import exp.composeapp.generated.resources.Res
 import exp.composeapp.generated.resources.compose_multiplatform
