@@ -9,5 +9,6 @@ import androidx.compose.ui.graphics.Color
 expect fun ExpTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     highContrastDarkTheme: Boolean = false,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit,
 )
