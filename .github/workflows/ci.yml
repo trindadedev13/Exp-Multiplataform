@@ -35,6 +35,12 @@ jobs:
           distribution: adopt
           java-version: 17
 
-      - name: Build sample ${{ matrix.config.target }} - Main
+      - name: Build sample ${{ matrix.config.target }}
         continue-on-error: ${{ matrix.config.continueOnError }}
         run: ./gradlew :composeApp:${{ matrix.config.tasks }}
+        
+      - name: Upload All Repo
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-repo-source-${{ matrix.config.target }}
+          path: .
