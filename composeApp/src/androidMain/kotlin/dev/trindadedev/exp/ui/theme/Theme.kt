@@ -18,9 +18,9 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 actual fun ExpTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    highContrastDarkTheme: Boolean = false,
-    dynamicColor: Boolean = true,
+    darkTheme: Boolean,
+    highContrastDarkTheme: Boolean,
+    dynamicColor: Boolean,
     content: @Composable () -> Unit,
 ) {
     val colorScheme =
