@@ -17,7 +17,7 @@ import androidx.core.view.WindowCompat
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun ExpTheme(
+actual fun ExpTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     highContrastDarkTheme: Boolean = false,
     dynamicColor: Boolean = true,
